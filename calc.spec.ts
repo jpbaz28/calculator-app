@@ -17,3 +17,11 @@ describe("Calculator Tests", () => {
         expect(product).toBe(25);
     })
 })
+
+describe("Testing environment variables", () => {
+
+    it("Should read an environment variable", () => {
+        const PASSWORD = process.env.DB_PASSWORD;
+        expect(PASSWORD).toBeTruthy();
+    })
+})
